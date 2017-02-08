@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :destroy, :show]
   def index
-    @projects = Project.all
+    @projects = Project.ruby_on_rails_projects
   end
 
   def show
