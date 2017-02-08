@@ -1,0 +1,7 @@
+<%=image_tag @project.main_image unless @project.main_image.nil? %>
+<p> <%=@project.title %>  </h1>
+<em> <%=@project.subtitle %>  </em>
+<p> <%=@project.body %>  </p>
+<p><%= link_to 'Edit', edit_project_path(@project) %></p>
+<p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<p><%= link_to 'Back', projects_path %></p>
