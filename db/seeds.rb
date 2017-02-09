@@ -1,3 +1,9 @@
+3.times do |topic|
+  Topic.create!(
+  title: "Topic #{topic}"
+  )
+end
+
 10.times do |blog|
   Blog.create!(
     title: "Blog #{blog}",
@@ -9,7 +15,8 @@
 
     What? Yahoo! Look out! You're all clear, kid. Now let's blow this thing and go home! Stand by to fire at Rebel base. Standing by. Great shot, kid. That was one in a million. Remember, the Force will be with you...always.
 
-    I'm not going anywhere. They're going to execute her. Look, a few minutes ago you said you didn't want to just wait here to be captured. Now all you want to do is stay. Marching into the detention area is not what I had in mind. But they're going to kill her! Better her than me... She's rich. Rich? Yes. Rich, powerful! Listen, if you were to rescue her, the reward would be... What? Well more wealth that you can imagine. I don't know, I can imagine quite a bit! You'll get it! I better! You will... "
+    I'm not going anywhere. They're going to execute her. Look, a few minutes ago you said you didn't want to just wait here to be captured. Now all you want to do is stay. Marching into the detention area is not what I had in mind. But they're going to kill her! Better her than me... She's rich. Rich? Yes. Rich, powerful! Listen, if you were to rescue her, the reward would be... What? Well more wealth that you can imagine. I don't know, I can imagine quite a bit! You'll get it! I better! You will... ",
+    topic_id: Topic.last.id
   )
 end
 puts "10 Blog posts created"
@@ -21,10 +28,20 @@ puts "10 Blog posts created"
   )
 end
 puts "5 Skills posts created"
-9.times do |project|
+8.times do |project|
   Project.create!(
     title: "Project title: #{project}",
-    subtitle: "My great service",
+    subtitle: "Ruby on Rails",
+    body: "What happened? Where? Found him in a junk pile? Oh, what a mess. Chewie, do you think you can repair him? Lando's got people who can fix him. No, thanks. I'm sorry. Am I interrupting anything? Not really. You look absolutely beautiful. You truly belong here with us among the clouds. Thank you. Will you join me for a little refreshment? Everyone's invited, of course. Having trouble with you droid? No. No problem. Why?",
+    main_image: "http://placehold.it/600x400",
+    thumb_image: "http://placehold.it/350x200"
+  )
+end
+
+1.times do |project|
+  Project.create!(
+    title: "Project title: #{project}",
+    subtitle: "Angular",
     body: "What happened? Where? Found him in a junk pile? Oh, what a mess. Chewie, do you think you can repair him? Lando's got people who can fix him. No, thanks. I'm sorry. Am I interrupting anything? Not really. You look absolutely beautiful. You truly belong here with us among the clouds. Thank you. Will you join me for a little refreshment? Everyone's invited, of course. Having trouble with you droid? No. No problem. Why?",
     main_image: "http://placehold.it/600x400",
     thumb_image: "http://placehold.it/350x200"
@@ -32,3 +49,10 @@ puts "5 Skills posts created"
 end
 
 puts "9 Projects posts created"
+
+3.times do |technology|
+  Project.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+puts "3 technologies posts created"
