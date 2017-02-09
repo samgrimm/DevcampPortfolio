@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :destroy, :show]
+  layout "project"
   def index
     @projects = Project.all
   end
