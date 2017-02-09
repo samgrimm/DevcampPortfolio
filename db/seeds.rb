@@ -49,3 +49,10 @@ end
 end
 
 puts "9 Projects posts created"
+
+3.times do |technology|
+  Project.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+puts "3 technologies posts created"
