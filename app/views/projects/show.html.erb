@@ -1,12 +1,21 @@
-
-<%=image_tag @project.main_image unless @project.main_image.nil? %>
-<h1> <%=@project.title %>  </h1>
-<em> <%=@project.subtitle %>  </em>
-<p> <%=@project.body %>  </p>
-<h2>Technologies Used:</h2>
-<% @project.technologies.each do |tech| %>
-  <p><%=tech.name %></p>
-<% end %>
-<p><%= link_to 'Edit', edit_project_path(@project) if logged_in?(:site_admin)%></p>
-<p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%></p>
-<p><%= link_to 'Back', projects_path %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%=image_tag @project.main_image unless @project.main_image.nil? %>
+    </div>
+    <div class="col-md-5">
+      <h1> <%=@project.title %>  </h1>
+      <hr>
+      <em> <%=@project.subtitle %>  </em>
+      <p> <%=@project.body %>  </p>
+      <hr>
+      <h3>Technologies Used:</h3>
+      <% @project.technologies.each do |tech| %>
+        <p><%=tech.name %></p>
+      <% end %>
+      <p><%= link_to 'Edit', edit_project_path(@project) if logged_in?(:site_admin)%></p>
+      <p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%></p>
+      
+    </div>
+  </div>
+</div>

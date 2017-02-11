@@ -1,8 +1,12 @@
 <footer class="text-muted">
   <div class="container">
-    <%= copyright_generator %>
-    <p>
-      <a href="#">Back to top</a>
-    </p>
+    <div class="row">
+      <div class="col-md-4">
+        <%= copyright_generator %>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <p class="pull-right"><%= link_to 'View All Projects', projects_path %> | <a href="#">Back to top</a></p>
+      </div>
+    </div>
   </div>
 </footer>
