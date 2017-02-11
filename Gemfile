@@ -56,3 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'devise', '~>4.2'
+
+gem 'bootstrap', '~>4.0.0.alpha6'
+
+gem 'sam_view_tool',git: 'https://github.com/samgrimm/sam-view-tool'
