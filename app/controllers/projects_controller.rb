@@ -48,6 +48,15 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Project.find(value[:id]).update(position: value[:position])
+    end
+    render nothing: true
+  end
+
+
+
   private
 
   def project_params
