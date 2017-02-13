@@ -1,5 +1,5 @@
 <div class="card" data-id="<%=project.id%>">
-  <%=image_tag project.thumb_image , height:'10%'%>
+  <%=image_tag project_img(project.thumb_image, 'thumb') %>
   <p class="card-text">
     <span> <%=link_to project.title, portfolio_show_path(project) %></span> <%=project.subtitle %>
   </p>
