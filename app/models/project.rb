@@ -4,6 +4,8 @@ class Project < ApplicationRecord
   has_many :technologies
   accepts_nested_attributes_for :technologies,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
+  mount_uploader :thumb_image, ProjectUploader
+  mount_uploader :main_image, ProjectUploader                              
 
   def self.angular
     where(subtitle: "Angular")
