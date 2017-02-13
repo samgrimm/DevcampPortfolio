@@ -13,8 +13,10 @@
       <% @project.technologies.each do |tech| %>
         <p><%=tech.name %></p>
       <% end %>
-      <p><%= link_to 'Edit', edit_project_path(@project) if logged_in?(:site_admin)%></p>
-      <p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%></p>
+      <% if logged_in?(:site_admin)%>
+        <p><%= link_to 'Edit', edit_project_path(@project) %></p>
+        <p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
 
     </div>
   </div>
