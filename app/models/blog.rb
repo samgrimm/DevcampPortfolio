@@ -7,6 +7,8 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
 
+  default_scope { order('created_at DESC') }
+
   def toggle_status
     if draft?
       published!
@@ -14,4 +16,6 @@ class Blog < ApplicationRecord
       draft!
     end
   end
+
+  
 end
