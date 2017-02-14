@@ -4,7 +4,5 @@ module BlogsHelper
     image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
   end
 
-  def topics_widget
-    link_to "Topics", topics_path, class:"badge badge-pill badge-default"
-  end
+
 end
