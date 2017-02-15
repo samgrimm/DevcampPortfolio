@@ -1,0 +1,9 @@
+<span class="pull-right">
+  <%= link_to fa_icon('pencil-square-o'), edit_blog_path(blog) %>
+  <%= link_to fa_icon('trash'), blog, method: :delete, data: { confirm: "Are you sure?" } %>
+  <% if blog.published? %>
+    <%= link_to fa_icon('toggle-on'), toggle_status_blog_path(blog) %>
+  <% else %>
+    <%= link_to fa_icon('toggle-on'), toggle_status_blog_path(blog) %>
+  <% end %>
+</span>
