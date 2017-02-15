@@ -86,4 +86,6 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = ['https://samantha-cabral-portfolio.herokuapp.com',
   'http://samantha-cabral-portfolio.herokuapp.com']
   config.action_cable.url = "wss:samantha-cabral-portfolio.herokuapp.com/cable"
+
+  config.action_mailer.default_url_options = { :host => "samantha-cabral-portfolio.com" }
 end
