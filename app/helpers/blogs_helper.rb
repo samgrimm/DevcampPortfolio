@@ -26,9 +26,9 @@ module BlogsHelper
 
   def blog_status_color(blog)
     if blog.draft?
-      'color: red;'
+      'blog-draft'
     else
-      'color: blue;'
+      'blog-published'
     end
   end
 

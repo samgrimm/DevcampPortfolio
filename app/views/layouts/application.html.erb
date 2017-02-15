@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <%= render 'shared/blog_nav' %>
     <%= alerts %>
     <div class="site-wrapper">
 
@@ -22,7 +23,7 @@
           <div id="background">
 
           </div>
-          <%= render 'shared/application_nav' %>
+
 
           <%= yield %>
           <%= render 'shared/application_footer' %>
