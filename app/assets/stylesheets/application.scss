@@ -222,3 +222,15 @@ body {
 .tech-news > .card {
   padding: 15px;
 }
+
+.app-card-container {
+  color: black;
+  text-shadow: none;
+  text-align: left;
+  a {
+    color: $brand-primary;
+  }
+}
+.app-card-container > .card {
+  padding: 40px;
+}
