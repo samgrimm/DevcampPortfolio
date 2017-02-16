@@ -1,5 +1,6 @@
 @import "variables";
 @import "bootstrap";
+@import "font-awesome";
 @import "jquery-ui";
 @import "gritter";
 
@@ -118,4 +119,7 @@ footer p {
 
 .project-container {
   padding-top: 20px;
+}
+.contact-links > a {
+  margin-left: 15px;
 }

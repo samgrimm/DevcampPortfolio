@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="contacts">
+    <h3><%= @contact.name %></h3>
+    <div class="contact-links">
+      <%= link_to fa_icon('backward'), contacts_path ,class: "fa-2x"%>
+      <%= link_to fa_icon('file-text'), toggle_status_contact_path(@contact),class: "fa-2x" %>
+    </div>
+    <hr>
+    <p><%= @contact.email %></p>
+    <p><%= @contact.message %></p>
+  </div>
+</div>
