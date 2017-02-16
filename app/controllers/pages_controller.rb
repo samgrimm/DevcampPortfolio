@@ -8,8 +8,6 @@ class PagesController < ApplicationController
     @skills = Skill.all
   end
 
-  def contact
-  end
 
   def tech_news
     @news = SocialTool.twitter_search
