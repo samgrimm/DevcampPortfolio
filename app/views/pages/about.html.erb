@@ -4,73 +4,62 @@
     <hr>
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag "running.png", width:"300",alt:"Profile picture for Sam"%>
-        <div class="skills">
-          <% @skills.each do |skill| %>
-          <div class="skill">
-            <h4><%= skill.title %></h4>
-            <div class="progress">
-              <div
-                class="progress-bar bg-warning"
-                role="progressbar"
-                aria-valuenow="<%= skill.percent_utilized%>"
-                aria-valuemax="100"
-                style="width: <%= skill.percent_utilized %>%;"
-              ></div>
-            </div>
-          </div>
-          <% end %>
-        </div>
+        <%= image_tag "profile.jpg", width:"300",alt:"Profile picture for Sam"%>
+        <!-- <%= render 'shared/skills' %> -->
       </div>
       <div class="col-md-8">
         <p>I have been developing my own Ruby on Rails applications for about 5 years,
         learning as I go. I would love to help you bring your amazing ideas to the web!</p>
-        <p>I have been developing my own Ruby on Rails applications for about 5 years,
-        learning as I go. I would love to help you bring your amazing ideas to the web!</p>
 
-        <p>
-          <button type="button"
-                  name="button"
-                  class="btn btn-primary"
-                  data-toggle="collapse"
-                  data-target="#jobs"
-                  aria-expanded="false"
-                  aria-controller="jobs">Job History
-          </button>
-          <button type="button"
-                  name="button"
-                  class="btn btn-primary"
-                  data-toggle="collapse"
-                  data-target="#education"
-                  aria-expanded="false"
-                  aria-controller="education">Education
-          </button>
-        </p>
-        <div class="collapse" id="jobs">
-          <div class="card card-block">
-            <p>I have been developing my own Ruby on Rails applications for about 5 years,
-            learning as I go. I would love to help you bring your amazing ideas to the web!</p>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#skills" role="tab">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-toggle="tab" href="#jobs" role="tab">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#education" role="tab">Education</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="skills">
+            <%= render 'shared/skills' %>
           </div>
-          <div class="card card-block">
-            <p>I have been developing my own Ruby on Rails applications for about 5 years,
-            learning as I go. I would love to help you bring your amazing ideas to the web!</p>
+          <div class="tab-pane " id="jobs">
+            <div class="card card-block about">
+              <p><span class="h5">Subscriber and Publisher Liaison - Project Manager - Learning List</span>
+              - Jan 2014 – Oct 2014 Austin, Texas</p>
+            </div>
+            <div class="card card-block about">
+              <p><span class="h5">Senior Consultant - Monitor Group</span> - Aug 2011 – Jul 2012 - São Paulo, Brazil</p>
+            </div>
+            <div class="card card-block about">
+              <p><span class="h5">Validation Engineer - Boeing 2005 – Jul 2009</span>
+              - Seattle, Washington</p>
+            </div>
+            <div class="card card-block about">
+              <p><span class="h5">Systems Engineer - Embraer 2000 – 2005</span>
+              - São Jose dos Campos, Brazil</p>
+            </div>
           </div>
-          <div class="card card-block">
-            <p>I have been developing my own Ruby on Rails applications for about 5 years,
-            learning as I go. I would love to help you bring your amazing ideas to the web!</p>
+          <div class="tab-pane" id="education">
+            <div class="card card-block about">
+              <h5>THE UNIVERSITY OF TEXAS AT AUSTIN, McCombs School of Business</h5>
+              <p>Master Business Administration; Marketing 2009 – 2011</p>
+            </div>
+            <div class="card card-block about">
+              <h5>Art Institute of Seattle</h5>
+              <p>Associate of Applied Art - Fashion Design 2006 – 2009</p>
+            </div>
+            <div class="card card-block about">
+              <h5>Universidade Federal de Santa Catarina</h5>
+              <p>Bachelor of Science - Mechanical Engineering 1995 – 2000</p>
+            </div>
           </div>
+
         </div>
-        <div class="collapse" id="education">
-          <div class="card card-block">
-            <p>School 1</p>
-          </div>
-          <div class="card card-block">
-            <p>School 2</p>
-          </div>
-          <div class="card card-block">
-            <p>School 3</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 @import "variables";
 @import "bootstrap";
+@import "font-awesome";
 @import "gritter";
 
 
@@ -225,7 +226,7 @@ h6, .h6, {
 }
 
 .app-footer {
-  color: white;
+  color: $gray-dark;
 }
 
 .tech-news {
@@ -251,8 +252,27 @@ h6, .h6, {
 }
 .app-card-container > .card {
   padding: 40px;
+  height: 650px;
 }
-.skill {
+
+.card.card-block.about {
+    margin-top: 10px;
+    padding-bottom: 0;
+}
+
+.card-deck > .skill {
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 10px;
+  > span.fa {
+    margin: 0 auto;
+    float: none;
+  }
+}
+.skills > .card {
+  border: none;
+}
+.bg-warning {
+    background-color: $brand-primary !important;
 }
