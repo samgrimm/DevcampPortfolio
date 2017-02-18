@@ -23,6 +23,29 @@ pt:
       body: "Conteúdo"
       technologies: "Tecnologias Utilizadas"
       add_tech: "Adicionar tecnologias"
+  blogs:
+    index:
+      new_blog: "Blog Novo"
+    show:
+      home: "Início"
+      published: "Publicado"
+      ago: "atrás"
+    edit:
+      title: "Editar Blog"
+      back: "Voltar"
+      show: "Mostrar"
+    new:
+      title: "Novo Blog"
+      back: "Voltar"
+    form:
+      title: "Título"
+      body: "Conteúdo"
+      topic: "Tópico"
+      draft: "Rascunho"
+      published: "Publicar"
+    blog:
+      published: "Publicado"
+      ago: "atrás"
   activerecord:
     models:
       user: Usuário

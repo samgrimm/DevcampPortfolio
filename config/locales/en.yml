@@ -23,6 +23,29 @@ en:
       body: "Body"
       technologies: "Tecnhologies Used"
       add_tech: "Add technologies"
+  blogs:
+    index:
+      new_blog: "New Blog"
+    show:
+      home: "Home"
+      published: "Published"
+      ago: "ago"
+    edit:
+      title: "Edit Blog"
+      back: "Back"
+      show: "Show"
+    new:
+      title: "New Blog"
+      back: "Back"
+    form:
+      title: "Title"
+      body: "Body"
+      topic: "Topic"
+      draft: "Draft"
+      published: "Published"
+    blog:
+      published: "Published"
+      ago: "ago"
   activerecord:
     models:
       user: User

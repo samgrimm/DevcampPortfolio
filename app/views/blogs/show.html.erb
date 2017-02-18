@@ -1,9 +1,9 @@
 <div class="blog-post">
-  <h2 class="blog-post-title"><%= link_to @blog.title.upcase, @blog %></h2>
-  <p class="blog-post-meta">Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p>
+  <h2 class="blog-post-title"><%= link_to @blog.title.upcase, blog_path(id: @blog.id, locale:I18n.locale) %></h2>
+  <p class="blog-post-meta"><%=t('.published')%> <%= distance_of_time_in_words(@blog.created_at, Time.now) %> <%=t('.ago')%></p>
   <nav class="breadcrumb">
-    <%= link_to "Home", root_path, class:"breadcrumb-item" %>
-    <%= link_to @blog.topic.title, topic_path(@blog.topic), class:"breadcrumb-item" %>
+    <%= link_to t('.home'), root_path(locale: I18n.locale), class:"breadcrumb-item" %>
+    <%= link_to @blog.topic.title, topic_path(id: @blog.topic.id, locale: I18n.locale), class:"breadcrumb-item" %>
     <span class="breadcrumb-item active"><%= @blog.title %></span>
     <% if logged_in?(:site_admin) %>
       <span class="pull-right blogcrumb">

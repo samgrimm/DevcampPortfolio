@@ -1,4 +1,5 @@
 <%= form_for(blog) do |f| %>
+<!-- todo - fix error messages to capture i18n -->
   <% if blog.errors.any? %>
     <% blog.errors.full_messages.each do |error| %>
       <%= alert_generator error %>
@@ -6,24 +7,25 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.text_field :title, class:"form-control", placeholder: "Title" %>
+    <%= f.text_field :title, class:"form-control", placeholder: t(".title") %>
   </div>
 
   <div class="form-group">
-    <%= f.label :topic_id %>
+    <%= f.label :topic_id, t(".topic") %>
+    <!-- todo - fix the topics to show only the topics in the correct language -->
     <%= f.collection_select(:topic_id, Topic.all, :id, :title, {class:"form-control"})  %>
   </div>
 
   <div class="form-group">
-    <%= f.text_area :body, rows: 15, class:"form-control" , placeholder: "Body"%>
+    <%= f.text_area :body, rows: 15, class:"form-control" , placeholder: t(".body")%>
   </div>
 
   <div class="form-group">
     <%= f.radio_button :status, 'draft' %>
-    <%= f.label :status, 'Draft'%>
+    <%= f.label :status, t(".draft")%>
 
     <%= f.radio_button :status, 'published' %>
-    <%= f.label :status, 'Publish'%>
+    <%= f.label :status, t(".published")%>
   </div>
 
   <div class="form-group">
