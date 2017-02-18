@@ -1,6 +1,6 @@
 <div class="album text-muted">
   <div class="container">
-    <%= link_to 'Add Project', new_project_path if logged_in?(:site_admin) %>
+    <%= link_to 'Add Project', new_project_path(locale: I18n.locale) if logged_in?(:site_admin) %>
     <div class="row <%="sortable" if logged_in?(:site_admin)%>">
 
       <%= render @projects %>

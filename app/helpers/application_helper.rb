@@ -2,10 +2,10 @@ module ApplicationHelper
 
   def login_helper style = ''
     if current_user.is_a?(GuestUser)
-      (link_to 'Login', new_user_session_path, class: style) + " ".html_safe +
-      (link_to 'Register', new_user_registration_path, class: style)
+      (link_to 'Login', new_user_session_path(locale: I18n.locale), class: style) + " ".html_safe +
+      (link_to 'Register', new_user_registration_path(locale: I18n.locale), class: style)
     else
-      link_to 'Logout', destroy_user_session_path, method: :delete , class: style
+      link_to 'Logout', destroy_user_session_path(locale: I18n.locale), method: :delete , class: style
     end
   end
 
@@ -25,28 +25,28 @@ module ApplicationHelper
   def nav_items
     [
       {
-        url: root_path,
-        title: 'Home'
+        url: root_path(params[:locale]),
+        title: t('.home')
       },
       {
-        url: about_me_path,
-        title: 'About'
+        url: about_me_path(params[:locale]),
+        title: t('.about')
       },
       {
-        url: contact_me_path,
-        title: 'Contact'
+        url: contact_me_path(params[:locale]),
+        title: t('.contact')
       },
       {
-        url: blogs_path,
-        title: 'Blog'
+        url: blogs_path(params[:locale]),
+        title: t('.blogs')
       },
       {
-        url: projects_path,
-        title: 'Project'
+        url: projects_path(params[:locale]),
+        title: t('.projects')
       },
       {
-        url: tech_news_path,
-        title: 'Tech News'
+        url: tech_news_path(params[:locale]),
+        title: t('.tech_news')
       }
     ]
   end

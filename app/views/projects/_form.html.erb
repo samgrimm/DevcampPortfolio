@@ -8,28 +8,28 @@
 <div class="row">
   <div class="col-md-6">
     <div class="form-group">
-      <%= f.label :title %>
+      <%= f.label :title , t('.title')%>
       <%= f.text_field :title , class:"form-control"%>
     </div>
 
     <div class="form-group">
-      <%= f.label :subtitle %>
+      <%= f.label :subtitle, t('.subtitle') %>
       <%= f.text_field :subtitle , class:"form-control"%>
     </div>
     <div class="form-group">
       <label class="btn btn-primary">
-        Upload a main image file <%= f.file_field :main_image , style: 'display:none;'%>
+        <%= t('.main_image')%> <%= f.file_field :main_image , style: 'display:none;'%>
       </label>
     </div>
     <div class="form-group">
       <label class="btn btn-primary">
-        Upload a thumb image file <%= f.file_field :thumb_image , style: 'display:none;'%>
+        <%= t('.thumb_image')%><%= f.file_field :thumb_image , style: 'display:none;'%>
       </label>
     </div>
   </div>
   <div class="col-md-6">
     <div class="form-group">
-      <%= f.label :body %>
+      <%= f.label :body,t('.body') %>
       <%= f.text_area :body , class:"form-control", rows: 14 %>
     </div>
 
@@ -38,13 +38,13 @@
   <hr>
   <div class="col-md-12">
 
-    <h2>Technologies used:</h2>
+    <h2><%= t('.technologies')%></h2>
     <div>
       <%= f.fields_for :technologies do |tech_form| %>
         <%= render 'technology_fields', f: tech_form %>
       <% end %>
       <div class="">
-        <%= link_to_add_association 'Add Technology', f, :technologies %>
+        <%= link_to_add_association t('.add_tech'), f, :technologies %>
       </div>
     </div>
 

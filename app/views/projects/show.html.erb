@@ -14,8 +14,8 @@
         <p><%=tech.name %></p>
       <% end %>
       <% if logged_in?(:site_admin)%>
-        <p><%= link_to 'Edit', edit_project_path(@project) %></p>
-        <p><%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Edit', edit_project_path(id: @project.id, locale: I18n.locale) %></p>
+        <p><%= link_to 'Destroy', project_path(id: @project.id, locale: I18n.locale), method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <% end %>
 
     </div>

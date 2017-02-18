@@ -2,7 +2,7 @@
   <div class="card" data-id="<%=project.id%>">
     <%=image_tag project_img(project.thumb_image, 'thumb') , width: '100%' %>
     <p class="card-text">
-      <span> <h3> <%=link_to project.title, portfolio_show_path(project) %> </h3> </span> <%=project.subtitle %>
+      <span> <h3> <%=link_to project.title, portfolio_show_path(locale: I18n.locale, id: project.id) %> </h3> </span> <%=project.subtitle %>
     </p>
   </div>
 </div>

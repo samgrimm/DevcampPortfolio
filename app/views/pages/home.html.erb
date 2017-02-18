@@ -1,7 +1,7 @@
 <div class="inner cover">
-  <h1 class="cover-heading">Welcome</h1>
-  <p class="lead">This is my web development studio. Checkout my projects, my development process, and my blog.</p>
+  <h1 class="cover-heading"><%=t :hello %></h1>
+  <p class="lead"><%=t :welcome_message %></p>
   <p class="lead">
-    <%= link_to "Learn More", about_me_path, class:"btn btn-lg btn-primary" %>
+    <%= link_to "Learn More", about_me_path(:locale=>'pt'), class:"btn btn-lg btn-primary" %>
   </p>
 </div>
