@@ -1,5 +1,5 @@
 
-<%= form_for(@project) do |f| %>
+<%= form_for(@project, url: {action: correct_action, locale: I18n.locale}) do |f| %>
 <% if @project.errors.any? %>
   <% @project.errors.full_messages.each do |error| %>
     <%= alert_generator error %>

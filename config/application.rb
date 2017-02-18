@@ -20,6 +20,6 @@ module Portfolio
   class Application < Rails::Application
     config.eager_load_paths << "#{Rails.root}/lib"
     config.secret_key_base = ENV["SECRET_KEY_BASE"]
-
+    config.i18n.default_locale = :en
   end
 end

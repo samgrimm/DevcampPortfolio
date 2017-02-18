@@ -1,5 +1,13 @@
 module BlogsHelper
 
+  def correct_action
+    if current_page?(new_blog_path(locale: I18n.locale))
+      "create"
+    else
+      "update"
+    end
+  end
+
   def gravatar_helper user
     image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", width: 60
   end

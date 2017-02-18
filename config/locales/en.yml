@@ -30,6 +30,9 @@ en:
       home: "Home"
       published: "Published"
       ago: "ago"
+      unauthorized: "You are not authorized to access this page"
+    create:
+      success: "Blog was successfully created."  
     edit:
       title: "Edit Blog"
       back: "Back"

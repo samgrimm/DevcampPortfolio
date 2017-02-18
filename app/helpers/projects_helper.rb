@@ -1,4 +1,13 @@
 module ProjectsHelper
+
+  def correct_action
+    if current_page?(new_project_path(locale: I18n.locale))
+      "create"
+    else
+      "update"
+    end
+  end
+
   def image_generator(height:, width: )
     "http://placehold.it/#{height}x#{width}"
   end

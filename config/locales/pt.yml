@@ -30,6 +30,7 @@ pt:
       home: "Início"
       published: "Publicado"
       ago: "atrás"
+      unauthorized: "Você não pode acessar esta página."
     edit:
       title: "Editar Blog"
       back: "Voltar"
