@@ -1,0 +1,66 @@
+<div class="app-card-container">
+  <div class="card">
+    <h1>Quem sou eu?</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "profile.jpg", width:"300",alt:"Profile picture for Sam"%>
+        <!-- <%= render 'shared/skills' %> -->
+      </div>
+      <div class="col-md-8">
+        <p>Sou engenheira e venho desenvolvendo apps em Ruby on Rails há mais de 5 anos, aprendendo pelo
+        caminho. Quer construir um app? Eu vou te ajudar a trazer as suas idéias de sonho para a realidade da web.</p>
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#skills" role="tab">Tecnologias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-toggle="tab" href="#jobs" role="tab">Emprego</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#education" role="tab">Formação</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="skills">
+            <%= render 'shared/skills' %>
+          </div>
+          <div class="tab-pane " id="jobs">
+            <div class="card card-block about">
+              <p><span class="h5">Gerente de Projetos - Learning List</span>
+              - Jan 2014 – Out 2014 Austin, Texas</p>
+            </div>
+            <div class="card card-block about">
+              <p><span class="h5">Consultora Senior - Monitor Group</span> - Ago 2011 – Jul 2012 - São Paulo, Brazil</p>
+            </div>
+            <div class="card card-block about">
+              <p><span class="h5">Engenheira de Sistemas - Boeing 2005 – Jul 2009</span>
+              - Seattle, Washington</p>
+            </div>
+            <div class="card card-block about">
+              <p><span class="h5">Engenheira de Sistemas - Embraer 2000 – 2005</span>
+              - São Jose dos Campos, Brazil</p>
+            </div>
+          </div>
+          <div class="tab-pane" id="education">
+            <div class="card card-block about">
+              <h5>THE UNIVERSITY OF TEXAS AT AUSTIN, McCombs School of Business</h5>
+              <p>MBA - Master Business Administration; Marketing 2009 – 2011</p>
+            </div>
+            <div class="card card-block about">
+              <h5>Art Institute of Seattle</h5>
+              <p>Fashion Design 2006 – 2009</p>
+            </div>
+            <div class="card card-block about">
+              <h5>Universidade Federal de Santa Catarina</h5>
+              <p>Engenharia Mecânica 1995 – 2000</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
