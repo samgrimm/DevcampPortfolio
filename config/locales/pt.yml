@@ -15,12 +15,16 @@ pt:
       projects: "Projetos"
       tech_news: "Tech News"
   projects:
+    index:
+      add_project: "Adicionar Projeto"
+    show:
+      tech_used: "Tecnologias Utilizadas"
     create:
       live: "Seu novo projeto foi publicado."
     update:
       updated: "Seu projeto foi atualizado."
     destroy:
-      removed: "Seu projeto foi apagado."  
+      removed: "Seu projeto foi apagado."
     edit:
       title: "Editar Projeto"
     new:
@@ -58,6 +62,12 @@ pt:
       unauthorized: "Você não pode acessar esta página."
     create:
       success: "Seu blog foi criado com sucesso."
+    update:
+      success: "Seu blog foi atualizado com sucesso."
+    destroy:
+      notice: "Seu blog foi apagado."
+    toggle_status:
+      success: "Seu blog foi atualizado com sucesso." 
     edit:
       title: "Editar Blog"
       back: "Voltar"

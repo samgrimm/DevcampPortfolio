@@ -9,13 +9,13 @@
       <em> <%=@project.subtitle %>  </em>
       <p> <%=@project.body %>  </p>
       <hr>
-      <h3>Technologies Used:</h3>
+      <h3><%= t('.tech_used')%></h3>
       <% @project.technologies.each do |tech| %>
         <p><%=tech.name %></p>
       <% end %>
       <% if logged_in?(:site_admin)%>
-        <p><%= link_to 'Edit', edit_project_path(id: @project.id, locale: I18n.locale) %></p>
-        <p><%= link_to 'Destroy', project_path(id: @project.id, locale: I18n.locale), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to fa_icon('pencil-square-o'), edit_project_path(id: @project.id, locale: I18n.locale) %></p>
+        <p><%= link_to fa_icon('trash'), project_path(id: @project.id, locale: I18n.locale), method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <% end %>
 
     </div>
