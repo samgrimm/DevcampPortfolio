@@ -1,6 +1,6 @@
 <div class="app-card-container">
   <div class="card">
-    <h1>Ready to get to work?</h1>
+    <h1><%= t ('.ready')%></h1>
     <hr>
     <div class="row">
       <div class="col-md-6">
@@ -10,7 +10,7 @@
           Austin, TX
           78738
         </address>
-        <p><a href="mailto:samantha.grimm@gmail.com">Email me</a></p>
+        <p><a href="mailto:samantha.grimm@gmail.com"><%= t ('.email_me')%></a></p>
       </div>
       <div class="col-md-6">
         <%= form_for(@contact, url: {action: "create", locale:I18n.locale}) do |f| %>
@@ -20,19 +20,19 @@
             <% end %>
           <% end %>
           <div class="form-group">
-            <%= f.label :email %>
+            <%= f.label :email, t('.email') %>
             <%= f.text_field :email, class:"form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :name %>
+            <%= f.label :name, t('.name') %>
             <%= f.text_field :name, class:"form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :message %>
+            <%= f.label :message, t('.message') %>
             <%= f.text_area :message, class:"form-control", rows: 10 %>
           </div>
           <div class="form-group">
-            <%= f.submit "Send", class: "btn btn-primary" %>
+            <%= f.submit t('.send'), class: "btn btn-primary" %>
           </div>
 
         <% end %>

@@ -23,6 +23,21 @@ en:
       body: "Body"
       technologies: "Tecnhologies Used"
       add_tech: "Add technologies"
+  contacts:
+    new:
+      title: "Title"
+      email: "Email"
+      name: "Name"
+      message: "Message"
+      send: "Send"
+      ready: "Ready to get to work?"
+      email_me: "Email me"
+    index:
+      title: "Title"
+      email: "Email"
+      name: "Name"
+      message: "Message"
+      status: "Status"
   blogs:
     index:
       new_blog: "New Blog"
@@ -32,7 +47,7 @@ en:
       ago: "ago"
       unauthorized: "You are not authorized to access this page"
     create:
-      success: "Blog was successfully created."  
+      success: "Blog was successfully created."
     edit:
       title: "Edit Blog"
       back: "Back"

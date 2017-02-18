@@ -23,6 +23,21 @@ pt:
       body: "Conteúdo"
       technologies: "Tecnologias Utilizadas"
       add_tech: "Adicionar tecnologias"
+  contacts:
+    new:
+      title: "Título"
+      email: "Email"
+      name: "Nome"
+      message: "Mensagem"
+      send: "Enviar"
+      ready: "Pronto para começar?"
+      email_me: "Me Escreva"
+    index:
+      title: "Título"
+      email: "Email"
+      name: "Nome"
+      message: "Mensagem"
+      status: "Status"
   blogs:
     index:
       new_blog: "Blog Novo"
@@ -31,6 +46,8 @@ pt:
       published: "Publicado"
       ago: "atrás"
       unauthorized: "Você não pode acessar esta página."
+    create:
+      success: "Seu blog foi criado com sucesso."
     edit:
       title: "Editar Blog"
       back: "Voltar"
