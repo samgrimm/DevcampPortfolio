@@ -1,0 +1,25 @@
+<div class="col-sm-3 offset-sm-1 blog-sidebar">
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>Quem sou eu?</h4>
+    <p>Sou engenheira e venho desenvolvendo apps em Ruby on Rails há mais de 5 anos, aprendendo pelo
+    caminho. Quer construir um app? Eu vou te ajudar a trazer as suas idéias de sonho para a realidade da web.</p>
+</p>
+  </div>
+
+  <%= source_helper("alert alert-info sidebar-module blog-sidebar") %>
+
+  <div class="sidebar-module">
+    <h4>Conecte-se</h4>
+    <ol class="list-unstyled social-links">
+      <li><a href="#"><%= fa_icon  "github" %></a></li>
+      <li><a href="#"><%= fa_icon  "twitter" %></a></li>
+      <li><a href="#"><%= fa_icon  "linkedin" %></a></li>
+    </ol>
+  </div>
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>Assuntos</h4>
+    <% @sidebar_topics.each do |topic| %>
+      <%= link_to topic.title, topic_path(:locale, topic), class:"badge badge-pill badge-default" %>
+    <% end %>
+  </div>
+</div><!-- /.blog-sidebar -->

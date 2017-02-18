@@ -1,0 +1,11 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <%= source_helper("alert alert-warning") %>
+    <h1 class="jumbotron-heading">Meu Portfolio</h1>
+    <p class="lead text-muted">Conheça aqui um pouco mais sobre o meu trabalho. Estes sāo projetos que eu criei ao longo dos anos, numa tentativa de aprimorar meus conhecimentos técnicos.</p>
+    <p>
+      <%= link_to "Saiba mais", about_me_path(locale: I18n.locale), class:"btn btn-primary"%>
+      <%= link_to "Meu Blog", blogs_path(locale: I18n.locale), class:"btn btn-secondary"%>
+    </p>
+  </div>
+</section>

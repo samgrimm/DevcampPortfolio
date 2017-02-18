@@ -1,8 +1,12 @@
 
 en:
+  back_to_top: "Back To Top"
   hello: "Hellow world"
   welcome_message: "This is my web development studio. Checkout my projects, my development process, and my blog."
   shared:
+    blog_masthead:
+      blog_title: "Samantha's Web Development Blog"
+      blog_description: "I use this space to my work process and guides to what I do. I also write about issues I had, in hopes they will help others."
     blog_nav:
       home: "Home"
       about: "About"

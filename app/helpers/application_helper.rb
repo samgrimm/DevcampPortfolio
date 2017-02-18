@@ -18,8 +18,12 @@ module ApplicationHelper
   end
 
 
-  def copyright_generator
-    @copyright = SamViewTool::Renderer.copyright 'Samantha Cabral', 'All rights reserved'
+  def copyright_generator(locale)
+    if locale == :en
+      @copyright = SamViewTool::Renderer.copyright 'Samantha Cabral', 'All rights reserved'
+    else
+      @copyright = SamViewTool::Renderer.copyright 'Samantha Cabral', 'Direitos reservados'
+    end
   end
 
   def nav_items

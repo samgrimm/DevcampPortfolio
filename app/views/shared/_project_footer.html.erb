@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <%= copyright_generator %>
+        <%= copyright_generator(I18n.locale) %>
       </div>
       <div class="col-md-5 offset-md-2">
-        <p class="pull-right"><%= link_to 'View All Projects', projects_path %> | <a href="#">Back to top</a></p>
+        <p class="pull-right"><a href="#"><%= t('back_to_top')%></a></p>
       </div>
     </div>
   </div>
