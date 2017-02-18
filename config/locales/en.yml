@@ -15,6 +15,12 @@ en:
       projects: "Projects"
       tech_news: "Tech News"
   projects:
+    create:
+      live: "Project is now live."
+    update:
+      updated: "Project has been updated."
+    destroy:
+      removed: 'Project was successfully removed.'
     edit:
       title: "Edit Project"
     new:

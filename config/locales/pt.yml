@@ -15,6 +15,12 @@ pt:
       projects: "Projetos"
       tech_news: "Tech News"
   projects:
+    create:
+      live: "Seu novo projeto foi publicado."
+    update:
+      updated: "Seu projeto foi atualizado."
+    destroy:
+      removed: "Seu projeto foi apagado."  
     edit:
       title: "Editar Projeto"
     new:

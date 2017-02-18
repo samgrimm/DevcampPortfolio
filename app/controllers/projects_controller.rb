@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     respond_to do |format|
       if @project.save
-        format.html { redirect_to projects_path, notice: 'Project is now live.' }
+        format.html { redirect_to projects_path(locale: I18n.locale), notice: t('.live') }
       else
         format.html { render :new }
       end
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to projects_path, notice: 'Project has been updated.' }
+        format.html { redirect_to projects_path(locale: I18n.locale), notice: t('.updated')}
       else
         format.html { render :new }
 
@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully removed.' }
+      format.html { redirect_to projects_url(locale: I18n.locale), notice: t('.removed') }
     end
   end
 
