@@ -1,7 +1,9 @@
 ---
 pt:
+  back: "Voltar"
+  confirm: "Tem certeza?"
   back_to_top: "Voltar ao Topo"
-  hello: "Bem vindo"
+  hello: "Oi!"
   welcome_message: "Este é meu estúdio! Sinta-se em casa e venha criar um app comigo."
   shared:
     blog_masthead:
@@ -113,7 +115,7 @@ pt:
         name: "Nome"
         statuses:
           received: "Recebido"
-          replied: "Respondido"    
+          replied: "Respondido"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

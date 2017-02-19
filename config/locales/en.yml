@@ -1,7 +1,9 @@
 
 en:
+  back: "Back"
+  confirm: "Are you sure?"
   back_to_top: "Back To Top"
-  hello: "Hellow world"
+  hello: "Hello"
   welcome_message: "This is my web development studio. Checkout my projects, my development process, and my blog."
   shared:
     blog_masthead:
