@@ -15,7 +15,7 @@
         <td><%= contact.email %></td>
         <td><%= contact.name %></td>
         <td><%= truncate(contact.message, length: 150) %><%=link_to fa_icon("plus"), contact_path(contact) %></td>
-        <td><%= contact.status.upcase %></td>
+        <td><%= contact.human_enum_name(:status , contact.status)%></td>
       </tr>
     <% end %>
   </tbody>

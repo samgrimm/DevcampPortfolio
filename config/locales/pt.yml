@@ -102,6 +102,18 @@ pt:
         body: "Conteúdo"
         main_image: "Imagem Principal"
         thumb_image: "Imagem em Miniatura"
+      blog:
+        title: "Título"
+        body: "Conteúdo"
+        statuses:
+          draft: "Rascunho"
+          published: "Publicado"
+      contact:
+        email: "Email"
+        name: "Nome"
+        statuses:
+          received: "Recebido"
+          replied: "Respondido"    
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

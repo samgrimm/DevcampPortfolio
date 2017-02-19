@@ -97,8 +97,20 @@ en:
         password_confirmation: "Password Confirmation"
         name: "Name"
       project:
-        title: "TITLESLLS"
+        title: "Title"
         subtitle: "Subtitle"
         body: "Body"
         main_image: "Main Image"
         thumb_image: "Thumb Image"
+      blog:
+        title: "Title"
+        body: "Body"
+        statuses:
+          draft: "Draft"
+          published: "Published"
+      contact:
+        email: "Email"
+        name: "Name"
+        statuses:
+          received: "Received"
+          replied: "Replied"
