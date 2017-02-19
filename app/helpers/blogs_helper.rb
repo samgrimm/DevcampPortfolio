@@ -1,6 +1,6 @@
 module BlogsHelper
 
-  def correct_action
+  def blog_form_action
     if current_page?(new_blog_path(locale: I18n.locale))
       "create"
     else
