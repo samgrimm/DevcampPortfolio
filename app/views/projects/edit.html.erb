@@ -1,4 +1,6 @@
 <div class="container portfolio-container">
   <h1><%= t('.title') %></h1>
-  <%= render 'form', project: @project %>
+  <%= form_for(@project, url: {action: "update", locale: I18n.locale}) do |f| %>
+    <%= render 'form', f: f %>
+  <% end %>
 </div>

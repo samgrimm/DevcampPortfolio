@@ -67,7 +67,7 @@ pt:
     destroy:
       notice: "Seu blog foi apagado."
     toggle_status:
-      success: "Seu blog foi atualizado com sucesso." 
+      success: "Seu blog foi atualizado com sucesso."
     edit:
       title: "Editar Blog"
       back: "Voltar"
@@ -102,7 +102,6 @@ pt:
         body: "Conteúdo"
         main_image: "Imagem Principal"
         thumb_image: "Imagem em Miniatura"
-  activerecord:
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

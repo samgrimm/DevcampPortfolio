@@ -1,7 +1,7 @@
-<%= form_for(blog, url: {action: blog_form_action, locale: I18n.locale}) do |f| %>
+
 <!-- todo - fix error messages to capture i18n -->
-  <% if blog.errors.any? %>
-    <% blog.errors.full_messages.each do |error| %>
+  <% if @blog.errors.any? %>
+    <% @blog.errors.full_messages.each do |error| %>
       <%= alert_generator error %>
     <% end %>
   <% end %>
@@ -31,4 +31,3 @@
   <div class="form-group">
     <%= f.submit class:"btn btn-primary" %>
   </div>
-<% end %>

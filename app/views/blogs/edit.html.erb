@@ -1,6 +1,7 @@
 <h1><%= t('.title') %></h1>
-
-<%= render 'form', blog: @blog %>
+<%= form_for(@blog, url: {action: "update", locale: I18n.locale}) do |f| %>
+  <%= render 'form', f: f %>
+<% end %>
 
 <%= link_to t('.show'), blog_path(id: @blog.id, locale: I18n.locale) %> |
 <%= link_to t('.back'), blogs_path(locale: I18n.locale) %>
