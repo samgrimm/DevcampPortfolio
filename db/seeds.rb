@@ -17,7 +17,15 @@ puts "1 regular user created"
 
 3.times do |topic|
   Topic.create!(
-  title: "Topic #{topic}"
+  title: "Topic #{topic}",
+  language: :english
+  )
+end
+
+3.times do |topic|
+  Topic.create!(
+  title: "Tópico #{topic}",
+  language: :portuguese
   )
 end
 
@@ -33,7 +41,7 @@ end
     What? Yahoo! Look out! You're all clear, kid. Now let's blow this thing and go home! Stand by to fire at Rebel base. Standing by. Great shot, kid. That was one in a million. Remember, the Force will be with you...always.
 
     I'm not going anywhere. They're going to execute her. Look, a few minutes ago you said you didn't want to just wait here to be captured. Now all you want to do is stay. Marching into the detention area is not what I had in mind. But they're going to kill her! Better her than me... She's rich. Rich? Yes. Rich, powerful! Listen, if you were to rescue her, the reward would be... What? Well more wealth that you can imagine. I don't know, I can imagine quite a bit! You'll get it! I better! You will... ",
-    topic_id: Topic.last.id,
+    topic_id: Topic.english.last.id,
     language: :english,
     status: :published
   )
@@ -54,7 +62,7 @@ puts "10 Blog posts in english created"
     Per aumento de cachacis, eu reclamis. Paisis, filhis, espiritis santis.
     Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
     Casamentiss faiz malandris se pirulitá.",
-    topic_id: Topic.last.id,
+    topic_id: Topic.portuguese.last.id,
     language: :portuguese,
     status: :published
   )

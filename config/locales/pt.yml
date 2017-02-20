@@ -28,6 +28,9 @@ pt:
       blogs: "Blogs"
       projects: "Projetos"
       tech_news: "Tech News"
+  topics:
+    index:
+      topics: "Tópicos"
   projects:
     index:
       add_project: "Adicionar Projeto"

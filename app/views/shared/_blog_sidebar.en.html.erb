@@ -18,7 +18,7 @@
   <div class="sidebar-module sidebar-module-inset">
     <h4>Topics</h4>
     <% @sidebar_topics.each do |topic| %>
-      <%= link_to topic.title, topic_path(:locale, topic), class:"badge badge-pill badge-default" %>
+      <%= link_to topic.title, topic_path(locale: I18n.locale, id:topic.id), class:"badge badge-pill badge-default" %>
     <% end %>
   </div>
 </div><!-- /.blog-sidebar -->
