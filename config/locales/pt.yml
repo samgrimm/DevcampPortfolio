@@ -50,6 +50,7 @@ pt:
       main_image: "Adicionar Image Principal"
       body: "Conteúdo"
       technologies: "Tecnologias Utilizadas"
+      languages: "Línguas"
       add_tech: "Adicionar tecnologias"
   contacts:
     new:

@@ -1,5 +1,6 @@
 class Project < ApplicationRecord
   include Placeholder
+  enum language: { english: 0, portuguese: 1 }
   validates_presence_of :title, :body
   has_many :technologies
   accepts_nested_attributes_for :technologies,
@@ -12,8 +13,12 @@ class Project < ApplicationRecord
     where(subtitle: "Angular")
   end
 
-  def self.by_position
-    order("position ASC")
+  def self.by_position(locale)
+    if locale == "en"
+      english.order("position ASC")
+    else
+      portuguese.order("position ASC")
+    end
   end
 
   scope :ruby_on_rails_projects, -> { where(subtitle: "Ruby on Rails") }

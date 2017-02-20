@@ -36,6 +36,15 @@
 
   <hr>
   <div class="col-md-12">
+    <h2><%= t('.languages')%></h2>
+    <div class="form-group">
+      <%= f.radio_button :language, 'english' %>
+      <%= f.label :language, t(".english")%>
+
+      <%= f.radio_button :language, 'portuguese' %>
+      <%= f.label :language, t(".portuguese")%>
+    </div>
+
 
     <h2><%= t('.technologies')%></h2>
     <div>

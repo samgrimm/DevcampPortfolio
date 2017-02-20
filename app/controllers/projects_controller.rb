@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
   def index
-    @projects = Project.by_position
+    @projects = Project.by_position(params[:locale])
   end
 
   def show

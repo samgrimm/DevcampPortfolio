@@ -33,10 +33,33 @@ end
     What? Yahoo! Look out! You're all clear, kid. Now let's blow this thing and go home! Stand by to fire at Rebel base. Standing by. Great shot, kid. That was one in a million. Remember, the Force will be with you...always.
 
     I'm not going anywhere. They're going to execute her. Look, a few minutes ago you said you didn't want to just wait here to be captured. Now all you want to do is stay. Marching into the detention area is not what I had in mind. But they're going to kill her! Better her than me... She's rich. Rich? Yes. Rich, powerful! Listen, if you were to rescue her, the reward would be... What? Well more wealth that you can imagine. I don't know, I can imagine quite a bit! You'll get it! I better! You will... ",
-    topic_id: Topic.last.id
+    topic_id: Topic.last.id,
+    language: :english,
+    status: :published
   )
 end
-puts "10 Blog posts created"
+puts "10 Blog posts in english created"
+
+10.times do |blog|
+  Blog.create!(
+    title: "Bloguis #{blog}",
+    body: "Mussum Ipsum, cacilds vidis litro abertis. Interagi no mé, cursus quis,
+    vehicula ac nisi. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit.
+    Aenean sit amet nisi. Mais vale um bebadis conhecidiss, que um alcoolatra anonimiss.
+    Delegadis gente finis, bibendum egestas augue arcu ut est.
+    Si num tem leite então bota uma pinga aí cumpadi!
+    Viva Forevis aptent taciti sociosqu ad litora torquent
+    Sapien in monti palavris qui num significa nadis i pareci latim.
+    A ordem dos tratores não altera o pão duris
+    Per aumento de cachacis, eu reclamis. Paisis, filhis, espiritis santis.
+    Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.
+    Casamentiss faiz malandris se pirulitá.",
+    topic_id: Topic.last.id,
+    language: :portuguese,
+    status: :published
+  )
+end
+puts "10 Blog posts in portuguese created"
 
 5.times do |skill|
   Skill.create!(
@@ -51,7 +74,8 @@ puts "5 Skills posts created"
     subtitle: "Ruby on Rails",
     body: "What happened? Where? Found him in a junk pile? Oh, what a mess. Chewie, do you think you can repair him? Lando's got people who can fix him. No, thanks. I'm sorry. Am I interrupting anything? Not really. You look absolutely beautiful. You truly belong here with us among the clouds. Thank you. Will you join me for a little refreshment? Everyone's invited, of course. Having trouble with you droid? No. No problem. Why?",
     main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200"
+    thumb_image: "http://placehold.it/350x200",
+    language: :english
   )
 end
 
@@ -61,11 +85,39 @@ end
     subtitle: "Angular",
     body: "What happened? Where? Found him in a junk pile? Oh, what a mess. Chewie, do you think you can repair him? Lando's got people who can fix him. No, thanks. I'm sorry. Am I interrupting anything? Not really. You look absolutely beautiful. You truly belong here with us among the clouds. Thank you. Will you join me for a little refreshment? Everyone's invited, of course. Having trouble with you droid? No. No problem. Why?",
     main_image: "http://placehold.it/600x400",
-    thumb_image: "http://placehold.it/350x200"
+    thumb_image: "http://placehold.it/350x200",
+    language: :english
   )
 end
 
-puts "9 Projects posts created"
+puts "9 Projects in english created"
+
+9.times do |project|
+  Project.create!(
+    title: "Projeto título: #{project}",
+    subtitle: "Ruby on Rails",
+    body: "Silvio Santos Ipsum vem pra lá, mah você vai pra cá.
+    Agora vai, agora vem pra láamm. Mah roda a roduamm.
+    Ma quem quer dinheiroam? O prêmio é em barras de ouro,
+    que vale mais que dinheiroam. Vem pra lá, mah você vai pra cá.
+    Agora vai, agora vem pra láamm. É por sua conta e riscoamm?
+    Ma não existem mulher feiam, existem mulher que não conhece
+    os produtos Jequitiamm. Mah você mora com o papai ou com a mamãem?
+    Ma! Ao adquirir o carnê do Baú, você estará concorrendo a um prêmio
+      de cem mil reaisam. É por sua conta e riscoamm?
+      Ma o Silvio Santos Ipsum é muitoam interesanteam. Com ele ma
+      você vai gerar textuans ha haae. Qual é a musicamm?
+      Wellintaaammmmmmmmm. Você veio da caravana de ondeammm?
+      Ha haeeee. Hi hi. É dinheiro ou não éam? Mah você não consegue
+      né Moisés? Você não consegueam. Eu não queria perguntar isso
+      publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam?
+      É dinheiro ou não éam? Ma vejam só, vejam só. Ma você está certo dissoam?",
+    main_image: "http://placehold.it/600x400",
+    thumb_image: "http://placehold.it/350x200",
+    language: :portuguese
+  )
+end
+puts "9 Projects in portuguese created"
 
 3.times do |technology|
   Project.last.technologies.create!(

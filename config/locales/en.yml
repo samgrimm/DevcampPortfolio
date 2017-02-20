@@ -50,6 +50,7 @@ en:
       main_image: "Upload a main image file"
       body: "Body"
       technologies: "Tecnhologies Used"
+      languages: "Languages"
       add_tech: "Add technologies"
   contacts:
     new:
