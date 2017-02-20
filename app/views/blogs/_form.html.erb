@@ -6,6 +6,7 @@
     <% end %>
   <% end %>
 
+
   <div class="form-group">
     <%= f.text_field :title, class:"form-control", placeholder: t(".title") %>
   </div>
@@ -21,11 +22,19 @@
   </div>
 
   <div class="form-group">
-    <%= f.radio_button :status, 'draft' %>
+    <%= f.radio_button :status, :draft %>
     <%= f.label :status, t(".draft")%>
 
-    <%= f.radio_button :status, 'published' %>
+    <%= f.radio_button :status, :published %>
     <%= f.label :status, t(".published")%>
+  </div>
+
+  <div class="form-group">
+    <%= f.radio_button :language, 'english' %>
+    <%= f.label :language, t(".english")%>
+
+    <%= f.radio_button :language, 'portuguese' %>
+    <%= f.label :language, t(".portuguese")%>
   </div>
 
   <div class="form-group">

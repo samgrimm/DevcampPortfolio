@@ -1,5 +1,6 @@
 class Blog < ApplicationRecord
   enum status: { draft: 0, published: 1 }
+  enum language: { english: 0, portuguese: 1 }
   extend FriendlyId
   friendly_id :title, use: :slugged
   belongs_to :topic
@@ -8,6 +9,14 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body, :topic
 
   default_scope { order('created_at DESC') }
+
+  def self.available(locale)
+    if locale == "en"
+      Blog.published.english
+    else
+      Blog.published.portuguese
+    end
+  end
 
   def toggle_status
     if draft?

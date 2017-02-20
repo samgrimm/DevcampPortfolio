@@ -10,7 +10,7 @@ class BlogsController < ApplicationController
     if logged_in?(:site_admin)
       @blogs = Blog.page(params[:page]).per(5)
     else
-      @blogs = Blog.published.page(params[:page]).per(5)
+      @blogs = Blog.available(params[:locale]).page(params[:page]).per(5)
     end
     @page_title = "My Portfolio Blog"
   end
@@ -89,7 +89,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :topic_id, :status)
+      params.require(:blog).permit(:title, :body, :topic_id, :status, :language)
     end
 
     def set_sidebar_topics

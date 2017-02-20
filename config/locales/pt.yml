@@ -16,7 +16,7 @@ pt:
       leave_comment: "Deixe seu comentário"
     comment:
       ago: "atrás"
-      comment_by: "Comentário deixado por"  
+      comment_by: "Comentário deixado por"
   shared:
     blog_masthead:
       blog_title: "Blog de Web Development da Sá"
