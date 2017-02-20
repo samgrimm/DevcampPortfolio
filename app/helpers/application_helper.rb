@@ -11,9 +11,16 @@ module ApplicationHelper
 
   def source_helper(styles)
      if session[:source]
-       greeting = "Thanks for visiting me from #{session[:source]}. Please feel
+       pt_greeting = "Obrigada por ter vindo do #{session[:source]}.
+       Navegue por ai e #{ link_to 'entre em contato', contact_me_path(locale: I18n.locale) }
+       se quiser fazer um projeto comigo."
+       en_greeting = "Thanks for visiting me from #{session[:source]}. Please feel
        free to #{ link_to 'contact me', contact_me_path(locale: I18n.locale) } if you would like to work together."
-       content_tag(:div, greeting.html_safe, class: styles, role:"alert")
+       if locale == :en
+         content_tag(:div, en_greeting.html_safe, class: styles, role:"alert")
+       else
+         content_tag(:div, pt_greeting.html_safe, class: styles, role:"alert")
+       end
      end
   end
 
