@@ -1,5 +1,7 @@
 ---
 pt:
+  older: "Mais Antigos >>"
+  newer: "<< Mais Novos"
   back: "Voltar"
   confirm: "Tem certeza?"
   back_to_top: "Voltar ao Topo"
