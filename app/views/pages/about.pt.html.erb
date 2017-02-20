@@ -8,12 +8,13 @@
         <!-- <%= render 'shared/skills' %> -->
       </div>
       <div class="col-md-8">
-        <p>Sou engenheira e venho desenvolvendo apps em Ruby on Rails há mais de 5 anos, aprendendo pelo
-        caminho. Quer construir um app? Eu vou te ajudar a trazer as suas idéias de sonho para a realidade da web.</p>
 
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#skills" role="tab">Tecnologias</a>
+            <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#skills" role="tab">Tecnologias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " data-toggle="tab" href="#jobs" role="tab">Emprego</a>
@@ -23,7 +24,15 @@
           </li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane active" id="skills">
+          <div class="tab-pane active" id="profile">
+            <br>
+            <p>Sou engenheira mecânica morando agora em Austin, TX. Depois de 10 anos trabalhando com aviação, um MBA,
+              e um período breve em consultoria de estratégia, decidi aprender a programar para trazer minhas ideias para
+              a web.</p>
+            <p>Venho desenvolvendo apps em Ruby on Rails há mais de 5 anos, aprendendo pelo
+            caminho. Quer construir um app? Eu vou te ajudar a trazer as suas idéias de sonho para a realidade da web.</p>
+          </div>
+          <div class="tab-pane" id="skills">
             <%= render 'shared/skills' %>
           </div>
           <div class="tab-pane " id="jobs">

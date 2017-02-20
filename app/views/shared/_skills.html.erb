@@ -1,7 +1,8 @@
 <div class="card-deck skills">
   <% @skills.each do |skill| %>
   <div class="card text-center skill">
-    <%= fa_icon "#{skill.badge}", class: "fa-4x" %>
+    <%= fa_stacked_icon "#{skill.badge} inverse", base: "circle",class: "fa-3x" %>
+    <br>
     <h4><%= skill.title %></h4>
 
     <div

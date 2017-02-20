@@ -8,12 +8,14 @@
         <!-- <%= render 'shared/skills' %> -->
       </div>
       <div class="col-md-8">
-        <p>I have been developing my own Ruby on Rails applications for about 5 years,
-        learning as I go. I would love to help you bring your amazing ideas to the web!</p>
+
 
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#skills" role="tab">Skills</a>
+            <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " data-toggle="tab" href="#skills" role="tab">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " data-toggle="tab" href="#jobs" role="tab">Jobs</a>
@@ -23,7 +25,15 @@
           </li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane active" id="skills">
+          <div class="tab-pane active" id="profile">
+            <br>
+            <p>I am a mechanical engineer from Brazil now based in Austin, TX. After 10 years in Aerospace,
+            a MBA and a brief stint in Management Consulting, I decided it was time to learn how to code so
+            I could bring my ideas to the web.</p>
+            <p>I have been developing my own Ruby on Rails applications for about 5 years,
+            learning as I go. I would love to help you bring your amazing ideas to the web!</p>
+          </div>
+          <div class="tab-pane" id="skills">
             <%= render 'shared/skills' %>
           </div>
           <div class="tab-pane " id="jobs">

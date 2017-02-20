@@ -72,7 +72,8 @@ puts "10 Blog posts in portuguese created"
 5.times do |skill|
   Skill.create!(
     title: "Rails #{skill}",
-    percent_utilized: 15
+    percent_utilized: 15,
+    badge: "diamond"
   )
 end
 puts "5 Skills posts created"
