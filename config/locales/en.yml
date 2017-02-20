@@ -2,11 +2,21 @@
 en:
   older: "Older >>"
   newer: "<< Newer"
+  login: "Login"
+  register: "Register"
+  logout: "Logout"
   back: "Back"
   confirm: "Are you sure?"
   back_to_top: "Back To Top"
   hello: "Hello"
   welcome_message: "This is my web development studio. Checkout my projects, my development process, and my blog."
+  comments:
+    comment_form:
+      post_comment: "Post Comment"
+      leave_comment: "Leave a comment"
+    comment:
+      ago: "ago"
+      comment_by: "Comment posted by"
   shared:
     blog_masthead:
       blog_title: "Samantha's Web Development Blog"
@@ -86,6 +96,7 @@ en:
       draft: "Draft"
       published: "Published"
     blog:
+      read_more: "Read More"
       published: "Published"
       ago: "ago"
   activerecord:

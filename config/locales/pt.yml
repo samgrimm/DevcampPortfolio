@@ -2,11 +2,21 @@
 pt:
   older: "Mais Antigos >>"
   newer: "<< Mais Novos"
+  login: 'Entrar'
+  register: 'Criar Conta'
+  logout: "Sair"
   back: "Voltar"
   confirm: "Tem certeza?"
   back_to_top: "Voltar ao Topo"
   hello: "Oi!"
   welcome_message: "Este é meu estúdio! Sinta-se em casa e venha criar um app comigo."
+  comments:
+    comment_form:
+      post_comment: "Enviar Comentário"
+      leave_comment: "Deixe seu comentário"
+    comment:
+      ago: "atrás"
+      comment_by: "Comentário deixado por"  
   shared:
     blog_masthead:
       blog_title: "Blog de Web Development da Sá"
@@ -86,6 +96,7 @@ pt:
       draft: "Rascunho"
       published: "Publicar"
     blog:
+      read_more: "Continue lendo"
       published: "Publicado"
       ago: "atrás"
   activerecord:

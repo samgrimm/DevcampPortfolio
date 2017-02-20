@@ -6,6 +6,6 @@
       <%= render 'shared/blog_edit', blog: blog %>
     </nav
   <% end %>
-  <p><%= truncate(blog.body, length: 500) %> <%=link_to "Read more", blog_path(id: blog.id, locale:I18n.locale) %></p>
+  <p><%= truncate(blog.body, length: 500) %> <%=link_to t('.read_more'), blog_path(id: blog.id, locale:I18n.locale) %></p>
 
 </div><!-- /.blog-post -->

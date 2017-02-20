@@ -2,10 +2,10 @@ module ApplicationHelper
 
   def login_helper style = ''
     if current_user.is_a?(GuestUser)
-      (link_to 'Login', new_user_session_path(locale: I18n.locale), class: style) + " ".html_safe +
-      (link_to 'Register', new_user_registration_path(locale: I18n.locale), class: style)
+      (link_to t('login'), new_user_session_path(locale: I18n.locale), class: style) + " ".html_safe +
+      (link_to t('register'), new_user_registration_path(locale: I18n.locale), class: style)
     else
-      link_to 'Logout', destroy_user_session_path(locale: I18n.locale), method: :delete , class: style
+      link_to t('logout'), destroy_user_session_path(locale: I18n.locale), method: :delete , class: style
     end
   end
 

@@ -10,8 +10,8 @@
             <%= comment.content %>
           </div>
           <div class="comment-attribution">
-            Comment posted by <%= comment.user.name %>
-             <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago.
+            <%= t('.comment_by') %> <%= comment.user.name %>
+             <%= distance_of_time_in_words(comment.created_at, Time.now) %> <%= t('.ago') %>.
           </div>
         </div>
       </div>
