@@ -10,6 +10,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <%= nav_helper "nav-link", "li"%>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Languages
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to locale: "en" do %>
+              <%= content_tag :span, "English", :class => "dropdown-item" %>
+            <% end %>
+            <%= link_to locale: "pt" do %>
+              <%= content_tag :span, "Português", :class => "dropdown-item" %>
+            <% end %>
+          </div>
+        </li>
       </ul>
       <ul class="navbar-nav pull-right">
         <%= login_helper "nav-link "%>

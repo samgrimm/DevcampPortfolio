@@ -9,6 +9,7 @@ module ApplicationHelper
     end
   end
 
+
   def source_helper(styles)
      if session[:source]
        pt_greeting = "Obrigada por ter vindo do #{session[:source]}.
