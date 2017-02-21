@@ -40,14 +40,7 @@ module ApplicationHelper
         url: root_path(params[:locale]),
         title: t('.home')
       },
-      {
-        url: about_me_path(params[:locale]),
-        title: t('.about')
-      },
-      {
-        url: contact_me_path(params[:locale]),
-        title: t('.contact')
-      },
+
       {
         url: blogs_path(params[:locale]),
         title: t('.blogs')
@@ -59,6 +52,14 @@ module ApplicationHelper
       {
         url: tech_news_path(params[:locale]),
         title: t('.tech_news')
+      },
+      {
+        url: about_me_path(params[:locale]),
+        title: t('.about')
+      },
+      {
+        url: contact_me_path(params[:locale]),
+        title: t('.contact')
       }
     ]
   end

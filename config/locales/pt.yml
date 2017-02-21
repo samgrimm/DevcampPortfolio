@@ -1,5 +1,6 @@
 ---
 pt:
+  languages: "Idioma"
   older: "Mais Antigos >>"
   newer: "<< Mais Novos"
   login: 'Entrar'
@@ -24,7 +25,7 @@ pt:
     blog_nav:
       home: "Início"
       about: "Quem sou eu"
-      contact: "Entre em contato"
+      contact: "Contato"
       blogs: "Blogs"
       projects: "Projetos"
       tech_news: "Tech News"
