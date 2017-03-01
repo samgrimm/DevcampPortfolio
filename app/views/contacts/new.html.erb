@@ -3,16 +3,9 @@
     <h1><%= t ('.ready')%></h1>
     <hr>
     <div class="row">
-      <div class="col-md-6">
-        <p><%= number_to_phone "5555555555"%></p>
-        <address class="">
-          3609 Faker st
-          Austin, TX
-          78738
-        </address>
-        <p><a href="mailto:samantha.grimm@gmail.com"><%= t ('.email_me')%></a></p>
-      </div>
-      <div class="col-md-6">
+
+      <div class="col-md-12">
+        <h4>Send me a message or <a href="mailto:samantha.grimm@gmail.com"><%= t ('.email_me')%></a></h4>
         <%= form_for(@contact, url: {action: "create", locale:I18n.locale}) do |f| %>
           <% if @contact.errors.any? %>
             <% @contact.errors.full_messages.each do |error| %>
