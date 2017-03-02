@@ -7,7 +7,7 @@
       <h1> <%=@project.title %>  </h1>
       <hr>
       <em> <%=@project.subtitle %>  </em>
-      <p> <%=@project.body %>  </p>
+      <p><%= markdown(@project.body) %></p>
       <hr>
       <h3><%= t('.tech_used')%></h3>
       <% @project.technologies.each do |tech| %>

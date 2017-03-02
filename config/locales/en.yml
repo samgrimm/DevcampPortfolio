@@ -49,7 +49,7 @@ en:
       title: "New Project"
     form:
       title: "Title"
-      subtitle: "Title"
+      subtitle: "Subtitle"
       thumb_image: "Upload a thumb image file"
       main_image: "Upload a main image file"
       body: "Body"
