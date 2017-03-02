@@ -65,7 +65,8 @@ class ProjectsController < ApplicationController
                                     :main_image,
                                     :thumb_image,
                                     :language,
-                                    technologies_attributes: [:id, :name, :_destroy]
+                                    technologies_attributes: [:id, :name, :_destroy],
+                                    links_attributes: [:id, :name, :url, :icon, :_destroy]
                                     )
   end
 

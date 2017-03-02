@@ -14,4 +14,8 @@ module ProjectsHelper
     end
   end
 
+  def github_link
+    "https://github.com/samgrim/overtime"
+  end
+
 end

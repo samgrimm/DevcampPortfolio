@@ -6,6 +6,11 @@ class Project < ApplicationRecord
   accepts_nested_attributes_for :technologies,
                                 allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
+
+  has_many :links
+  accepts_nested_attributes_for :links,
+                                allow_destroy: true,
+                                reject_if: lambda { |attrs| attrs['name'].blank? }
   mount_uploader :thumb_image, ProjectUploader
   mount_uploader :main_image, ProjectUploader
 
