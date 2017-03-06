@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:edit, :update, :destroy, :show]
+  before_action :set_project, only: [:edit, :update, :destroy, :show, :copy]
   layout "project"
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort, :copy]}, site_admin: :all
 
   def index
     @projects = Project.by_position(params[:locale])
@@ -53,6 +53,12 @@ class ProjectsController < ApplicationController
     end
     render nothing: true
   end
+
+  def copy
+    @new_project = @project.create_copy
+    redirect_to edit_project_path(id: @new_project.id, locale: I18n.locale), notice: t('.success')
+  end
+
 
 
 

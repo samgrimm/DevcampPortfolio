@@ -26,6 +26,25 @@ class Project < ApplicationRecord
     end
   end
 
+  def other_language
+    if self.english?
+      "portuguese"
+    else
+      "english"
+    end
+  end
+
+  def create_copy
+    new_project = Project.create(
+            title: self.title,
+            subtitle: self.subtitle,
+            main_image: self.main_image,
+            thumb_image: self.thumb_image,
+            body: self.body,
+            language: self.other_language
+            )
+  end
+
   scope :ruby_on_rails_projects, -> { where(subtitle: "Ruby on Rails") }
 
 

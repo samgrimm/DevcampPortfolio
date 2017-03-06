@@ -18,6 +18,23 @@ class Blog < ApplicationRecord
     end
   end
 
+  def other_language
+    if self.english?
+      "portuguese"
+    else
+      "english"
+    end
+  end
+
+  def create_copy
+    new_blog = Blog.create(
+            title: self.title,
+            body: self.body,
+            topic_id: self.topic_id,
+            language: self.other_language
+            )
+  end
+
   def toggle_status
     if draft?
       published!

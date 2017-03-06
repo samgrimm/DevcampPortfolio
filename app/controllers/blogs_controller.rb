@@ -1,8 +1,8 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  before_action :set_sidebar_topics, except: [:destroy, :toggle_status]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status, :copy]
+  before_action :set_sidebar_topics, except: [:destroy, :toggle_status, :copy]
   layout "blog"
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status, :copy]}, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json
@@ -80,6 +80,12 @@ class BlogsController < ApplicationController
     @blog.toggle_status
     redirect_to blogs_url(locale: I18n.locale), notice: t('.success')
   end
+
+  def copy
+    @new_blog = @blog.create_copy
+    redirect_to edit_blog_path(id: @new_blog.id, locale: I18n.locale), notice: t('.success')
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
