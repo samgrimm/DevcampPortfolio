@@ -58,13 +58,14 @@ en:
       add_tech: "Add technologies"
   contacts:
     new:
+      send_message_or: "Send me a message or"
       title: "Title"
       email: "Email"
       name: "Name"
       message: "Message"
       send: "Send"
       ready: "Ready to get to work?"
-      email_me: "Email me"
+      email_me: "email me"
     index:
       title: "Title"
       email: "Email"

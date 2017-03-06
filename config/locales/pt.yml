@@ -58,13 +58,14 @@ pt:
       add_tech: "Adicionar tecnologias"
   contacts:
     new:
+      send_message_or: "Deixe um recado ou"
       title: "Título"
       email: "Email"
       name: "Nome"
       message: "Mensagem"
       send: "Enviar"
       ready: "Pronto para começar?"
-      email_me: "Me Escreva"
+      email_me: "mande um email"
     index:
       title: "Título"
       email: "Email"
